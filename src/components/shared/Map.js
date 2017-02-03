@@ -4,8 +4,8 @@ class Map extends React.Component {
   componentDidMount() {
     setTimeout(function(){
       const map = new google.maps.Map(document.getElementById('map'), {
-        center: {lat: -34.397, lng: 150.644},
-        zoom: 13
+        center: {lat: 49.41999817, lng: 32.04999924},
+        zoom: 6
       });
 
       const image = {
@@ -21,7 +21,7 @@ class Map extends React.Component {
       };
 
       const marker = new google.maps.Marker({
-        position: {lat: -34.397, lng: 150.644},
+        position: {lat: 50.40000153, lng: 30.56999969},
         map: map,
         icon: image,
         shape: shape
@@ -43,6 +43,10 @@ class Map extends React.Component {
       <div id="map"></div>
     );
   }
+}
+
+Map.propTypes = {
+  markersData: PropTypes.array.isRequired
 }
 
 export default Map;

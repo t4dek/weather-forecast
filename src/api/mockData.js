@@ -93,80 +93,98 @@ export const cities = [
     }
   },
 
-  {
-    "response": {
-    "version":"0.1",
-    "termsofService":"http://www.wunderground.com/weather/api/d/terms.html",
-    "features": {
-    "conditions": 1
-    }
-      , "results": [
-      {
-      "name": "Lviv",
-      "city": "Lviv",
-      "state": "46",
-      "country": "UR",
-      "country_iso3166":"UA",
-      "country_name":"Ukraine",
-      "zmw": "00000.4.33393",
-      "l": "/q/zmw:00000.4.33393"
-      }
-      ,
-      {
-      "name": "Lviv",
-      "city": "Lviv",
-      "state": "46",
-      "country": "UR",
-      "country_iso3166":"UA",
-      "country_name":"Ukraine",
-      "zmw": "00000.3.33393",
-      "l": "/q/zmw:00000.3.33393"
-      }
-      ,
-      {
-      "name": "Lviv",
-      "city": "Lviv",
-      "state": "46",
-      "country": "UR",
-      "country_iso3166":"UA",
-      "country_name":"Ukraine",
-      "zmw": "00000.1.33393",
-      "l": "/q/zmw:00000.1.33393"
-      }
-      ,
-      {
-      "name": "Lviv",
-      "city": "Lviv",
-      "state": "46",
-      "country": "UR",
-      "country_iso3166":"UA",
-      "country_name":"Ukraine",
-      "zmw": "00000.4.33393",
-      "l": "/q/zmw:00000.4.33393"
-      }
-      ,
-      {
-      "name": "Lviv",
-      "city": "Lviv",
-      "state": "46",
-      "country": "UR",
-      "country_iso3166":"UA",
-      "country_name":"Ukraine",
-      "zmw": "00000.3.33393",
-      "l": "/q/zmw:00000.3.33393"
-      }
-      ,
-      {
-      "name": "Lviv",
-      "city": "Lviv",
-      "state": "46",
-      "country": "UR",
-      "country_iso3166":"UA",
-      "country_name":"Ukraine",
-      "zmw": "00000.1.33393",
-      "l": "/q/zmw:00000.1.33393"
-      }
-      ]
-    }
+
+{
+  "response": {
+  "version":"0.1",
+  "termsofService":"http://www.wunderground.com/weather/api/d/terms.html",
+  "features": {
+  "conditions": 1
   }
+  }
+  , "current_observation": {
+    "image": {
+    "url":"http://icons.wxug.com/graphics/wu2/logo_130x80.png",
+    "title":"Weather Underground",
+    "link":"http://www.wunderground.com"
+    },
+    "display_location": {
+    "full":"L\u0027viv, Ukraine",
+    "city":"L\u0027viv",
+    "state":"46",
+    "state_name":"Ukraine",
+    "country":"UR",
+    "country_iso3166":"UA",
+    "zip":"00000",
+    "magic":"1",
+    "wmo":"33393",
+    "latitude":"49.81999969",
+    "longitude":"23.95000076",
+    "elevation":"324.9"
+    },
+    "observation_location": {
+    "full":"L\u0027viv, ",
+    "city":"L\u0027viv",
+    "state":"",
+    "country":"UA",
+    "country_iso3166":"UA",
+    "latitude":"49.81999969",
+    "longitude":"23.95000076",
+    "elevation":"1066 ft"
+    },
+    "estimated": {
+    },
+    "station_id":"UKLL",
+    "observation_time":"Last Updated on February 3, 7:00 PM EET",
+    "observation_time_rfc822":"Fri, 03 Feb 2017 19:00:00 +0200",
+    "observation_epoch":"1486141200",
+    "local_time_rfc822":"Fri, 03 Feb 2017 19:06:41 +0200",
+    "local_epoch":"1486141601",
+    "local_tz_short":"EET",
+    "local_tz_long":"Europe/Kiev",
+    "local_tz_offset":"+0200",
+    "weather":"Fog",
+    "temperature_string":"34 F (1 C)",
+    "temp_f":34,
+    "temp_c":1,
+    "relative_humidity":"93%",
+    "wind_string":"From the West at 4 MPH",
+    "wind_dir":"West",
+    "wind_degrees":280,
+    "wind_mph":4,
+    "wind_gust_mph":0,
+    "wind_kph":7,
+    "wind_gust_kph":0,
+    "pressure_mb":"1010",
+    "pressure_in":"29.83",
+    "pressure_trend":"0",
+    "dewpoint_string":"32 F (0 C)",
+    "dewpoint_f":32,
+    "dewpoint_c":0,
+    "heat_index_string":"NA",
+    "heat_index_f":"NA",
+    "heat_index_c":"NA",
+    "windchill_string":"30 F (-1 C)",
+    "windchill_f":"30",
+    "windchill_c":"-1",
+    "feelslike_string":"30 F (-1 C)",
+    "feelslike_f":"30",
+    "feelslike_c":"-1",
+    "visibility_mi":"0.1",
+    "visibility_km":"0.1",
+    "solarradiation":"--",
+    "UV":"-1","precip_1hr_string":"-9999.00 in (-9999.00 mm)",
+    "precip_1hr_in":"-9999.00",
+    "precip_1hr_metric":"--",
+    "precip_today_string":"0.00 in (0.0 mm)",
+    "precip_today_in":"0.00",
+    "precip_today_metric":"0.0",
+    "icon":"fog",
+    "icon_url":"http://icons.wxug.com/i/c/k/nt_fog.gif",
+    "forecast_url":"http://www.wunderground.com/global/stations/33393.html",
+    "history_url":"http://www.wunderground.com/history/airport/UKLL/2017/2/3/DailyHistory.html",
+    "ob_url":"http://www.wunderground.com/cgi-bin/findweather/getForecast?query=49.81999969,23.95000076",
+    "nowcast":""
+  }
+}
 ];

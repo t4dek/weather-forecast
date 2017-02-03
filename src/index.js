@@ -10,7 +10,7 @@ import { loadWeatherData } from './actions/weatherActions';
 import './styles/styles.css'; //Webpack can import CSS files too!
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
-const store = configureStore({weatherData:[]});
+const store = configureStore();
 store.dispatch(loadWeatherData());
 
 render(
