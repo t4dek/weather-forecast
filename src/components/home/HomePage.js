@@ -7,7 +7,6 @@ class HomePage extends React.Component {
     return (
       <div className="jumbotron">
         <Map/>
-        {this.props.weatherData}
       </div>
     );
   }
@@ -18,7 +17,6 @@ HomePage.propTypes = {
 };
 
 function mapStateToProps(state, ownProps){
-  console.log(state)
   return {
     weatherData: state.weatherData
   };

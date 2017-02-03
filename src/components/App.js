@@ -1,6 +1,4 @@
 import React, {PropTypes} from 'react';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import AppBar from 'material-ui/AppBar';
 import { apiKeys } from '../constants/apiKeys';
 
 class App extends React.Component {
@@ -15,21 +13,10 @@ class App extends React.Component {
   }
 
   render() {
-    const style = {
-      height: '500px',
-      width: '800px'
-    };
-
     return (
-      <MuiThemeProvider>
         <div>
-          <AppBar
-            title="Weather Forecast"
-            showMenuIconButton={false}
-          />
           {this.props.children}
         </div>
-      </MuiThemeProvider>
     );
   }
 }
