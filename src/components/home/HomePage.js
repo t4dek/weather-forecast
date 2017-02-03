@@ -1,13 +1,27 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
+import {connect} from 'react-redux';
+import Map from '../shared/Map';
 
 class HomePage extends React.Component {
   render() {
     return (
       <div className="jumbotron">
-        <h1>Map will go here</h1>
+        <Map/>
+        {this.props.weatherData}
       </div>
     );
   }
 }
 
-export default HomePage;
+HomePage.propTypes = {
+  weatherData: PropTypes.array.isRequired
+};
+
+function mapStateToProps(state, ownProps){
+  console.log(state)
+  return {
+    weatherData: state.weatherData
+  };
+}
+
+export default connect(mapStateToProps)(HomePage);
