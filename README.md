@@ -7,7 +7,7 @@
 2. **Clone this repository.**
 3. **Install Node Packages.** - `npm install`
 4. **Run the app.** - `npm start -s`
-5. If you are using some editor/IDE which supporting **'safe write'** [consider this info]((http://webpack.github.io/docs/webpack-dev-server.html#working-with-editors-ides-supporting-safe-write))to assure hot reloading works properly.
+5. If you are using some editor/IDE which supporting **'safe write'** [consider this info](http://webpack.github.io/docs/webpack-dev-server.html#working-with-editors-ides-supporting-safe-write) to assure hot reloading works properly.
 
 ## Testing the app
 By default when you running app with `npm start -s` tests are running as well and you can see progress in your **terminal**.
