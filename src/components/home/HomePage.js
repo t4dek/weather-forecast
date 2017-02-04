@@ -8,22 +8,19 @@ class HomePage extends React.Component {
 
     this.state = {
       weatherData: [...props.weatherData]
-    }
+    };
   }
 
   componentWillReceiveProps(nextProps) {
     if(nextProps.weatherData && nextProps.weatherData.length){
-      const newState = this.state;
-      newState.weatherData = nextProps.weatherData;
-      this.setState({newState});
+      const weatherData = nextProps.weatherData;
+      this.setState({weatherData});
     }
   }
 
   render() {
     return (
-      <div className="jumbotron">
-        <Map markersData={this.state.weatherData}/>
-      </div>
+      <Map markersData={this.state.weatherData}/>
     );
   }
 }

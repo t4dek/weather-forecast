@@ -18,18 +18,14 @@ class Map extends React.Component {
       mapInitData,
       iconShape
     };
-
-    console.log(this.state);
   }
 
   componentDidMount() {
-    setTimeout(() => {
-      const map = new google.maps.Map(document.getElementById('map'), this.state.mapInitData);
+    const map = new google.maps.Map(document.getElementById('map'), this.state.mapInitData);
 
-      this.props.markersData.forEach((marker) => {
-        this.placeMarker(map, marker)
-      });
-    }, 300);
+    this.props.markersData.forEach((marker) => {
+      this.placeMarker(map, marker)
+    });
   }
 
   placeMarker(map, markerData) {
