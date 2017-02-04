@@ -41,11 +41,11 @@ function mapStateToProps(state, ownProps){
       lng: data.current_observation.display_location.longitude,
       weather: data.current_observation.weather,
       temp: data.current_observation.temp_c,
-      wind_info: data.current_observation.wind_string,
+      windInfo: data.current_observation.wind_string,
       feelslike: data.current_observation.feelslike_string,
-      detailed_url: data.current_observation.forecast_url,
-      icon_url: data.current_observation.icon_url,
-      last_updated: data.current_observation.observation_time
+      detailedUrl: data.current_observation.forecast_url,
+      iconUrl: data.current_observation.icon_url,
+      lastUpdated: data.current_observation.observation_time
     };
   });
   return {
