@@ -30,9 +30,9 @@ HomePage.propTypes = {
 };
 
 function mapStateToProps(state, ownProps){
-
-  const formattedWeatherData = state.weatherData.map(data => {
-    return {
+  let formattedWeatherData = [];
+  state.weatherData.forEach(data => {
+    formattedWeatherData.push({
       city: data.current_observation.display_location.city,
       lat: data.current_observation.display_location.latitude,
       lng: data.current_observation.display_location.longitude,
@@ -43,7 +43,7 @@ function mapStateToProps(state, ownProps){
       detailedUrl: data.current_observation.forecast_url,
       iconUrl: data.current_observation.icon_url,
       lastUpdated: data.current_observation.observation_time
-    };
+    });
   });
   return {
     weatherData: formattedWeatherData

@@ -1,0 +1,27 @@
+export const cities = [
+  "Kiev",
+  "Vinnytsia",
+  "Donets'k"
+  // "Dnipropetrovsk",
+  // "Zhytomyr",
+  // "Zaporizhzhia",
+  // "Ivano-frankivs'k",
+  // "Kirovohrad",
+  // "Lugansk",
+  // "Luts'k",
+  // "L'viv",
+  // "Mikolaiv",
+  // "Odessa",
+  // "Poltava",
+  // "Rovno",
+  // "SIMFEROPOL'",
+  // "Sumy",
+  // "Ternopil'",
+  // "Uzhhorod",
+  // "Kharkov",
+  // "Kherson",
+  // "Khmel'nyts'kyi",
+  // "Cherkasy",
+  // "Chernihiv",
+  // "Chernivtsi"
+]
