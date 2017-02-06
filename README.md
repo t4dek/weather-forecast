@@ -13,4 +13,4 @@
 ~~By default when you running app with `npm start -s` tests are running as well and you can see progress in your **terminal**.~~
 ~~If you want to run test separatelly use `mocha --reporter progress tools/testSetup.js \"src/**/*.test.js\"` command.~~
 
-## Tesing TBD
+## Testing TBD
