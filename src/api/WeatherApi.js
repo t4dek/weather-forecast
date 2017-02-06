@@ -1,17 +1,24 @@
+import 'whatwg-fetch';
+import moment from 'moment';
+import { apiKeys } from '../constants/apiKeys';
 import { cities } from '../constants/cities';
-import Storage from './Storage';
 
 class WeatherApi {
-  static getWeatherData() {
-    const storage = new Storage();
-    let weatherData = new Map();
-    cities.forEach(city => {
-      storage.populateWeatherData(city);
-      const data = storage.getParsedItemFromStorage(city);
-      debugger;
-      weatherData.set(city, data);
-    });
-    return weatherData;
+  static getWeatherData(city) {
+    return localStorage.getItem(city);
+  }
+
+  static makeRequest(city){
+    return fetch(`http://api.wunderground.com/api/${apiKeys.wundergroundKey}/conditions/q/Ukraine/${city}.json`)
+      .then(response => response.json());
+  }
+
+  static setItemToStorage(key, value){
+    localStorage.setItem(key, value);
+  }
+
+  static checkIfDateValid(date){
+    return moment(date).isSame(new Date(), 'day');
   }
 }
 

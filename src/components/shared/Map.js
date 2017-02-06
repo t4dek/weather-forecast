@@ -5,8 +5,8 @@ class Map extends React.Component {
     super(props);
 
     const mapInitData = {
-      center: {lat: 49.41999817, lng: 32.04999924}, //approximate center of Ukraine on map
-      zoom: 6
+      center: {lat: 48.52000046, lng: 32.20000076}, //approximate center of Ukraine on map
+      zoom: 7
     };
 
     const iconShape = {
@@ -21,14 +21,26 @@ class Map extends React.Component {
   }
 
   componentDidMount() {
-    const map = new google.maps.Map(document.getElementById('map'), this.state.mapInitData);
+    if(!this.state.map){
+      const map = new google.maps.Map(document.getElementById('map'), this.state.mapInitData); // eslint-disable-line no-undef
+      this.props.markersData.forEach(marker => {
+        this.placeMarker(map, marker);
+      });
+      //bad habbit but needed in order to use it in componentWillReceiveProps
+      this.setState({map}); // eslint-disable-line react/no-did-mount-set-state
+    }
+  }
 
-    this.props.markersData.forEach((marker) => {
-      this.placeMarker(map, marker)
-    });
+  componentWillReceiveProps(nextProps) {
+    if(nextProps.markersData && nextProps.markersData.length){
+      nextProps.markersData.forEach(marker => {
+        this.placeMarker(this.state.map, marker);
+      });
+    }
   }
 
   placeMarker(map, markerData) {
+    if(!map){return;}
     const markerPosition = {
       lat: parseFloat(markerData.lat),
       lng: parseFloat(markerData.lng)
@@ -36,12 +48,12 @@ class Map extends React.Component {
 
     const image = {
       url: markerData.iconUrl,
-      size: new google.maps.Size(50, 50),
-      origin: new google.maps.Point(0, 0),
-      anchor: new google.maps.Point(0, 32)
+      size: new google.maps.Size(50, 50), // eslint-disable-line no-undef
+      origin: new google.maps.Point(0, 0), // eslint-disable-line no-undef
+      anchor: new google.maps.Point(0, 32) // eslint-disable-line no-undef
     };
 
-    const marker = new google.maps.Marker({
+    const marker = new google.maps.Marker({ // eslint-disable-line no-undef
       position: markerPosition,
       map: map,
       icon: image,
@@ -63,7 +75,7 @@ class Map extends React.Component {
       <h4>Detailed Forecast: </h4><a target="_blank" href="${data.detailedUrl}">here<a>
       </div>`;
 
-    return new google.maps.InfoWindow({
+    return new google.maps.InfoWindow({ // eslint-disable-line no-undef
       content: contentString
     });
   }
@@ -77,6 +89,6 @@ class Map extends React.Component {
 
 Map.propTypes = {
   markersData: PropTypes.array.isRequired
-}
+};
 
 export default Map;

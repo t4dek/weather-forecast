@@ -1,4 +1,4 @@
-import MockData from './MockData';
+import { cities } from './mocks/mockData';
 
 // This file mocks a web API by working with the hard-coded data below.
 // It uses setTimeout to simulate the delay of an AJAX call.
@@ -9,7 +9,7 @@ class MockWeatherApi {
     const delay = 0;
     return new Promise((resolve, reject) => {
       setTimeout(() => {
-        resolve(MockData.cities());
+        resolve(Object.assign([], cities));
       }, delay);
     });
   }
